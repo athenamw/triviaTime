@@ -1,11 +1,11 @@
 :root {
-    --light-green:#D0F5BE;
-    --dark-green: #98EECC;
-    --blue: #79E0EE;
-    --yellow: #FBFFDC;
+    --pink:#E49393;
+    --green: #408E91;
+    --dark-green: #245953;
+    --gray: #D8D8D8;
 }
 
-body {background-color: var(--yellow);
+body {background-color: var(--gray);
 }
 
 header {
@@ -19,8 +19,15 @@ button {
     justify-content: center;
     align-items: center;
     display: grid;
-    background-color: var(--light-green);
+    background-color: var(--pink);
     width: 250px;
     height: 50px;
     font-size: 16px;
+}
+#gameBoard {
+    display: none;
+    text-align: center;
+    color: var(--dark-green);
+    font-size: 20px;
+    font:bold
 }
