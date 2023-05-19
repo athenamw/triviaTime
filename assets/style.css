@@ -1,0 +1,22 @@
+:root {
+    --light-green:#D0F5BE;
+    --dark-green: #98EECC;
+    --blue: #79E0EE;
+    --yellow: #FBFFDC;
+}
+
+body {background-color: var(--yellow);
+}
+
+header{
+    text-align: center;
+}
+
+button{
+    text-align: center;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    display: grid;
+    background-color: var(--light-green);
+}
