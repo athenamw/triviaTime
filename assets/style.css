@@ -1,33 +1,66 @@
-:root {
-    --pink:#E49393;
-    --green: #408E91;
-    --dark-green: #245953;
-    --gray: #D8D8D8;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-body {background-color: var(--gray);
+:root {
+  --pink: #e49393;
+  --green: #408e91;
+  --dark-green: #245953;
+  --gray: #d8d8d8;
+}
+
+body {
+  background-color: var(--gray);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
-    text-align: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-    text-align: center;
-    margin:auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    background-color: var(--pink);
-    width: 250px;
-    height: 50px;
-    font-size: 16px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  background-color: var(--pink);
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  border: 2px solid var(--dark-green)
+}
+button:hover{
+    background-color:  (--green);
 }
 #gameBoard {
-    display: none;
-    text-align: center;
-    color: var(--dark-green);
-    font-size: 20px;
-    font:bold
+  display: none;
+  width: 800px;
+  max-width: 80%;
+  text-align: center;
+  color: var(--dark-green);
+  font-size: 20px;
+  font: bold;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+    margin: 20px 0;
 }
