@@ -43,9 +43,7 @@ button {
   font-size: 16px;
   border: 2px solid var(--dark-green)
 }
-button:hover{
-    background-color:  (--green);
-}
+
 #gameBoard {
   display: none;
   width: 800px;
