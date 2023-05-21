@@ -8,6 +8,8 @@ var ans4 = document.getElementById("ans4");
 var answerButtons = document.getElementById("answerButtons");
 var next = document.getElementById("next");
 const highScores = document.getElementById(highScore);
+var score = 0;
+var questionCount = 0;
 
 
 // starts the game and presents 1st question
@@ -24,16 +26,25 @@ function nextQuestion(index) {
     ans2.textContent=questions[index].answer[1].text;
     ans3.textContent=questions[index].answer[2].text;
     ans4.textContent=questions[index].answer[3].text;
-   
-}
+};
 
-// function showQuestion() {
+// let questionCount = 0;
+// let display = document.querySelector(questions);
+// display.innerText = questions[questionCount];
 
+// next.addEventListener("click", () ==> {
+//    counter++;
+// //     display.innerText = questions[questionCount]
+// });
+
+// for (let i = 1; i < questions.length; i++) {
+//     const element = array[index];
+    
 // }
 
-function selectAnswer() {
+// function selectAnswer() {
 
-}
+// }
 
 var questions = [
     {

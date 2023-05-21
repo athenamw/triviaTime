@@ -11,6 +11,9 @@
   --dark-green: #245953;
   --gray: #d8d8d8;
 }
+header.nav {
+
+}
 
 body {
   background-color: var(--gray);
@@ -23,12 +26,7 @@ body {
   align-items: center;
 }
 
-h1 {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 button {
   text-align: center;
@@ -43,6 +41,9 @@ button {
   font-size: 16px;
   border: 2px solid var(--dark-green)
   
+}
+#next {
+    background-color: var(--green);
 }
 
 #gameBoard {
