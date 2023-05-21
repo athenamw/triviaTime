@@ -11,9 +11,7 @@
   --dark-green: #245953;
   --gray: #d8d8d8;
 }
-header.nav {
-
-}
+nav {}
 
 body {
   background-color: var(--gray);
@@ -28,7 +26,7 @@ body {
 
 
 
-button {
+.startBtn,.answerButtons {
   text-align: center;
   margin: auto;
   display: flex;

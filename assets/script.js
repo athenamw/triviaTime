@@ -7,7 +7,7 @@ var ans3 = document.getElementById("ans3");
 var ans4 = document.getElementById("ans4");
 var answerButtons = document.getElementById("answerButtons");
 var next = document.getElementById("next");
-const highScores = document.getElementById(highScore);
+const highScores = document.getElementById("highScore");
 var score = 0;
 var questionCount = 0;
 
@@ -21,25 +21,25 @@ beginButton.addEventListener("click", function () {
 
 function nextQuestion(index) {
     // gameBoard. = "";
-    question.textContent= questions[index].question;
-    ans1.textContent=questions[index].answer[0].text;
-    ans2.textContent=questions[index].answer[1].text;
-    ans3.textContent=questions[index].answer[2].text;
-    ans4.textContent=questions[index].answer[3].text;
+    question.textContent = questions[index].question;
+    ans1.textContent = questions[index].answer[0].text;
+    ans2.textContent = questions[index].answer[1].text;
+    ans3.textContent = questions[index].answer[2].text;
+    ans4.textContent = questions[index].answer[3].text;
 };
 
 // let questionCount = 0;
 // let display = document.querySelector(questions);
 // display.innerText = questions[questionCount];
 
-// next.addEventListener("click", () ==> {
-//    counter++;
-// //     display.innerText = questions[questionCount]
-// });
+next.addEventListener("click", function () {
+    questionCount++;
+    display.innerText = questions[questionCount];
+});
 
 // for (let i = 1; i < questions.length; i++) {
 //     const element = array[index];
-    
+
 // }
 
 // function selectAnswer() {
