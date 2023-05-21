@@ -19,13 +19,13 @@ beginButton.addEventListener("click", function () {
     nextQuestion(0);
 });
 
-function nextQuestion(index) {
+function nextQuestion(questionCount) {
     // gameBoard. = "";
-    question.textContent = questions[index].question;
-    ans1.textContent = questions[index].answer[0].text;
-    ans2.textContent = questions[index].answer[1].text;
-    ans3.textContent = questions[index].answer[2].text;
-    ans4.textContent = questions[index].answer[3].text;
+    question.textContent = questions[questionCount].question;
+    ans1.textContent = questions[questionCount].answer[0].text;
+    ans2.textContent = questions[questionCount].answer[1].text;
+    ans3.textContent = questions[questionCount].answer[2].text;
+    ans4.textContent = questions[questionCount].answer[3].text;
 };
 
 // let questionCount = 0;
@@ -34,7 +34,8 @@ function nextQuestion(index) {
 
 next.addEventListener("click", function () {
     questionCount++;
-    display.innerText = questions[questionCount];
+    nextQuestion(questionCount);
+    //display.innerText = questions[questionCount];
 });
 
 // for (let i = 1; i < questions.length; i++) {
