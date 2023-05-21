@@ -23,7 +23,7 @@ body {
   align-items: center;
 }
 
-header {
+h1 {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -42,6 +42,7 @@ button {
   height: 50px;
   font-size: 16px;
   border: 2px solid var(--dark-green)
+  
 }
 
 #gameBoard {

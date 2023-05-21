@@ -5,22 +5,31 @@ var ans1 = document.getElementById("ans1");
 var ans2 = document.getElementById("ans2");
 var ans3 = document.getElementById("ans3");
 var ans4 = document.getElementById("ans4");
+var answerButtons = document.getElementById("answerButtons");
+var next = document.getElementById("next");
+const highScores = document.getElementById(highScore);
 
 
-
+// starts the game and presents 1st question
 beginButton.addEventListener("click", function () {
     gameBoard.style.display = "block";
     beginButton.style.display = "none";
+    nextQuestion(0);
 });
 
-function nextQuestion() {
-    gameBoard.style.display = "none";
-
+function nextQuestion(index) {
+    // gameBoard. = "";
+    question.textContent= questions[index].question;
+    ans1.textContent=questions[index].answer[0].text;
+    ans2.textContent=questions[index].answer[1].text;
+    ans3.textContent=questions[index].answer[2].text;
+    ans4.textContent=questions[index].answer[3].text;
+   
 }
 
-function showQuestion() {
+// function showQuestion() {
 
-}
+// }
 
 function selectAnswer() {
 
