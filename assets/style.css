@@ -64,7 +64,10 @@ body {
   margin: 20px 0;
 }
 
-.startBtn: hover;
+.resultBox {
+    display: none;
+}
+
+/* .startBtn: hover;
 .button-grid:hover;
-.next:hover;
-.submit:hover;
+.submit:hover; */

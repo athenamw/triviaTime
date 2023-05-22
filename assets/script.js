@@ -1,5 +1,5 @@
 var gameBoard = document.getElementById("gameBoard");
-var beginButton = document.getElementById("button");
+var startBtn = document.getElementById("startBtn");
 var question = document.getElementById("askAway");
 var rules = document.getElementById("rules");
 var ans1 = document.getElementById("ans1");
@@ -17,7 +17,7 @@ var questionCount = 0;
 startBtn.addEventListener("click", function () {
     gameBoard.style.display = "block";
     startBtn.style.display = "none";
-    rules.style.display = none;
+    rules.style.display = "none";
     nextQuestion(0);
 });
 
@@ -35,15 +35,13 @@ function nextQuestion(questionCount) {
 // display.innerText = questions[questionCount];
 
 next.addEventListener("click", function () {
-    questionCount++;
-    nextQuestion(questionCount);
+    if (questionCount < questions.length) {
+        questionCount++;
+        nextQuestion(questionCount);
+    }
     //display.innerText = questions[questionCount];
 });
 
-// for (let i = 1; i < questions.length; i++) {
-//     const element = array[index];
-
-// }
 
 // function selectAnswer() {
 
