@@ -1,6 +1,7 @@
 var gameBoard = document.getElementById("gameBoard");
 var beginButton = document.getElementById("button");
 var question = document.getElementById("askAway");
+var rules = document.getElementById("rules");
 var ans1 = document.getElementById("ans1");
 var ans2 = document.getElementById("ans2");
 var ans3 = document.getElementById("ans3");
@@ -13,9 +14,10 @@ var questionCount = 0;
 
 
 // starts the game and presents 1st question
-beginButton.addEventListener("click", function () {
+startBtn.addEventListener("click", function () {
     gameBoard.style.display = "block";
-    beginButton.style.display = "none";
+    startBtn.style.display = "none";
+    rules.style.display = none;
     nextQuestion(0);
 });
 

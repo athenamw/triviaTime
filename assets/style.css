@@ -11,7 +11,8 @@
   --dark-green: #245953;
   --gray: #d8d8d8;
 }
-nav {}
+nav {
+}
 
 body {
   background-color: var(--gray);
@@ -24,9 +25,9 @@ body {
   align-items: center;
 }
 
-
-
-.startBtn,.answerButtons {
+.startBtn,
+.answerButtons {
+  position: absolute;
   text-align: center;
   margin: auto;
   display: flex;
@@ -37,11 +38,11 @@ body {
   width: 250px;
   height: 50px;
   font-size: 16px;
-  border: 2px solid var(--dark-green)
-  
+  border: 2px solid var(--dark-green);
 }
+
 #next {
-    background-color: var(--green);
+  background-color: var(--green);
 }
 
 #gameBoard {
@@ -57,8 +58,13 @@ body {
 }
 
 .button-grid {
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    gap: 10px;
-    margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
 }
+
+.startBtn: hover;
+.button-grid:hover;
+.next:hover;
+.submit:hover;
