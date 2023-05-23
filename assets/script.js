@@ -45,6 +45,22 @@ next.addEventListener("click", function () {
 
 
 
+function checkAnswer(){
+ var userSelection=this.textContent;
+ var correctAnswer=questions[questionCount].answer;
+ if(userSelection==correctAnswer){
+    score++;
+ }
+ else{
+    // call decrease timer function
+ }
+}
+
+ans1.addEventListener("click", checkAnswer);
+ans2.addEventListener("click", checkAnswer);
+ans3.addEventListener("click", checkAnswer);
+ans4.addEventListener("click", checkAnswer);
+
 // questions
 var questions = [
     {
