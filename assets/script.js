@@ -24,68 +24,66 @@ startBtn.addEventListener("click", function () {
 function nextQuestion(questionCount) {
     // gameBoard. = "";
     question.textContent = questions[questionCount].question;
-    ans1.textContent = questions[questionCount].answer[0].text;
-    ans2.textContent = questions[questionCount].answer[1].text;
-    ans3.textContent = questions[questionCount].answer[2].text;
-    ans4.textContent = questions[questionCount].answer[3].text;
+    ans1.textContent = questions[questionCount].options[0];
+    ans2.textContent = questions[questionCount].options[1];
+    ans3.textContent = questions[questionCount].options[2];
+    ans4.textContent = questions[questionCount].options[3];
 };
 
-// let questionCount = 0;
-// let display = document.querySelector(questions);
-// display.innerText = questions[questionCount];
-
+// allows next question to display
 next.addEventListener("click", function () {
     questionCount++;
     if (questionCount < questions.length) {
         nextQuestion(questionCount);
     }
-    else{
+    else {
         next.textContent = "Game Over";
         gameBoard.style.display = "none";
     }
-    //display.innerText = questions[questionCount];
 });
 
 
-// function selectAnswer() {
 
-// }
 
 var questions = [
     {
         question: "What does % sign signify in javascript?",
-        answer: [
-            { text: "Division", correct: false },
-            { text: "Percentage", correct: false },
-            { text: "Remainder", correct: true },
-            { text: "Output", correct: false },
+        answer: "Remainder",
+        options: [
+            "Division",
+            "Percentage",
+            "Remainder",
+            "Output"
         ]
     },
     {
         question: "What statement ends a function in javascript?",
-        answer: [
-            { text: "Console.log", correct: false },
-            { text: "Continue", correct: false },
-            { text: "Break", correct: false },
-            { text: "Return", correct: true },
+        answer: "Return",
+        options: [
+            "Console.log",
+            "Continue",
+            "Break",
+            "Return"
         ]
     },
     {
         question: "Which statement converts JSON objects into a string?",
-        answer: [
-            { text: "JSON.parse", correct: false },
-            { text: "JSON.stringify", correct: true },
-            { text: "JSON.string", correct: false },
-            { text: "JSON.dif", correct: false },
+        answer: "JSON.stringify",
+        options: [
+            "JSON.parse",
+            "JSON.stringify",
+            "JSON.string",
+            "JSON.dif"
         ]
     },
     {
         question: "What characters signifies an array?",
-        answer: [
-            { text: "[]", correct: true },
-            { text: "()", correct: false },
-            { text: "''", correct: false },
-            { text: "{}", correct: false },
+        answer: "[]",
+        options: [
+            "[]",
+            "()",
+            "''",
+            "{}"
         ]
     }
 
