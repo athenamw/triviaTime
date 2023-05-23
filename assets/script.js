@@ -12,6 +12,8 @@ const highScores = document.getElementById("highScore");
 var secondsSection = document.getElementsByClassName("seconds")[0];
 var score = 0;
 var questionCount = 0;
+var timer;
+var timerCount=60;
 
 
 // starts the game and presents 1st question
@@ -20,6 +22,7 @@ startBtn.addEventListener("click", function () {
     startBtn.style.display = "none";
     rules.style.display = "none";
     nextQuestion(0);
+    startTimer();
 });
 
 function nextQuestion(questionCount) {
@@ -60,6 +63,28 @@ ans1.addEventListener("click", checkAnswer);
 ans2.addEventListener("click", checkAnswer);
 ans3.addEventListener("click", checkAnswer);
 ans4.addEventListener("click", checkAnswer);
+
+function startTimer() {
+    // Sets timer
+    timer = setInterval(function() {
+      timerCount--;
+      secondsSection.textContent = timerCount;
+      if (timerCount >= 0) {
+        // Tests if win condition is met
+        if (isWin && timerCount > 0) {
+          // Clears interval and stops timer
+          clearInterval(timer);
+          winGame();
+        }
+      }
+      // Tests if time has run out
+      if (timerCount === 0) {
+        // Clears interval
+        clearInterval(timer);
+        loseGame();
+      }
+    }, 1000);
+  }
 
 // questions
 var questions = [
