@@ -9,6 +9,7 @@ var ans4 = document.getElementById("ans4");
 var answerButtons = document.getElementById("answerButtons");
 var next = document.getElementById("next");
 const highScores = document.getElementById("highScore");
+var secondsSection = document.getElementsByClassName("seconds")[0];
 var score = 0;
 var questionCount = 0;
 
@@ -44,7 +45,7 @@ next.addEventListener("click", function () {
 
 
 
-
+// questions
 var questions = [
     {
         question: "What does % sign signify in javascript?",
