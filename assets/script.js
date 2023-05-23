@@ -35,9 +35,13 @@ function nextQuestion(questionCount) {
 // display.innerText = questions[questionCount];
 
 next.addEventListener("click", function () {
+    questionCount++;
     if (questionCount < questions.length) {
-        questionCount++;
         nextQuestion(questionCount);
+    }
+    else{
+        next.textContent = "Game Over";
+        gameBoard.style.display = "none";
     }
     //display.innerText = questions[questionCount];
 });
