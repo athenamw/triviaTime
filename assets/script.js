@@ -40,6 +40,14 @@ next.addEventListener("click", function () {
     questionCount++;
     if (questionCount < questions.length) {
         nextQuestion(questionCount);
+        ans1.style.backgroundColor = "white";
+        ans2.style.backgroundColor = "white";
+        ans3.style.backgroundColor = "white";
+        ans4.style.backgroundColor = "white";
+        ans1.style.color = "black";
+        ans2.style.color = "black";
+        ans3.style.color = "black";
+        ans4.style.color = "black";
     }
     else {
         next.textContent = "Game Over";
@@ -53,13 +61,16 @@ next.addEventListener("click", function () {
 
 function checkAnswer(){
  var userSelection=this.textContent;
+ this.style.color = "white";
  var correctAnswer=questions[questionCount].answer;
  if(userSelection==correctAnswer){
     score++;
+    this.style.backgroundColor = "green";
  }
  else{
     // call decrease timer function
     timerCount -=10;
+    this.style.backgroundColor = "red";
  }
 }
 
