@@ -15,6 +15,9 @@ var questionCount = 0;
 var timer;
 var timerCount=60;
 var finalTimer=0;
+var submit=document.getElementById("submit");
+var initials = document.getElementById("initials");
+
 
 
 // starts the game and presents 1st question
@@ -53,7 +56,8 @@ next.addEventListener("click", function () {
         next.textContent = "Game Over";
         gameBoard.style.display = "none";
         finalTimer=timerCount;
-        console.log(finalTimer);
+        // secondsSection.textContent = finalTimer;
+       endGame();
     }
 });
 
@@ -84,22 +88,20 @@ function startTimer() {
     timer = setInterval(function() {
       timerCount--;
       secondsSection.textContent = timerCount;
-      if (timerCount >= 0) {
-        // Tests if win condition is met
-        // if (isWin && timerCount > 0) {
-        //   // Clears interval and stops timer
-        //   clearInterval(timer);
-        //   winGame();
-        // }
-    //   }
-    //   // Tests if time has run out
-    //   if (timerCount === 0) {
-    //     // Clears interval
-    //     clearInterval(timer);
-    //     loseGame();
-      }
+      if (timerCount <= 0) {
+        clearInterval(timer);
+        secondsSection.textContent = 0;
+         endGame();   }
     }, 1000);
   }
+function endGame(){
+    document.getElementsByClassName("resultBox")[0].style.display = "block";
+    submit.addEventListener("click", function(){
+        var winnerName = initials.value;
+        console.log(winnerName);
+        localStorage
+    })
+}
 
 // questions
 var questions = [
