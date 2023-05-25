@@ -13,9 +13,9 @@ var secondsSection = document.getElementsByClassName("seconds")[0];
 var score = 0;
 var questionCount = 0;
 var timer;
-var timerCount=60;
-var finalTimer=0;
-var submit=document.getElementById("submit");
+var timerCount = 60;
+var finalTimer = 0;
+var submit = document.getElementById("submit");
 var initials = document.getElementById("initials");
 
 
@@ -53,29 +53,25 @@ next.addEventListener("click", function () {
         ans4.style.color = "black";
     }
     else {
-        next.textContent = "Game Over";
-        gameBoard.style.display = "none";
-        finalTimer=timerCount;
-        // secondsSection.textContent = finalTimer;
-       endGame();
+        endGame();
     }
 });
 
 
 
-function checkAnswer(){
- var userSelection=this.textContent;
- this.style.color = "white";
- var correctAnswer=questions[questionCount].answer;
- if(userSelection==correctAnswer){
-    score++;
-    this.style.backgroundColor = "green";
- }
- else{
-    // call decrease timer function
-    timerCount -=10;
-    this.style.backgroundColor = "red";
- }
+function checkAnswer() {
+    var userSelection = this.textContent;
+    this.style.color = "white";
+    var correctAnswer = questions[questionCount].answer;
+    if (userSelection == correctAnswer) {
+        score++;
+        this.style.backgroundColor = "green";
+    }
+    else {
+        // decrease timer
+        timerCount -= 10;
+        this.style.backgroundColor = "red";
+    }
 }
 
 ans1.addEventListener("click", checkAnswer);
@@ -85,22 +81,28 @@ ans4.addEventListener("click", checkAnswer);
 
 function startTimer() {
     // Sets timer
-    timer = setInterval(function() {
-      timerCount--;
-      secondsSection.textContent = timerCount;
-      if (timerCount <= 0) {
-        clearInterval(timer);
-        secondsSection.textContent = 0;
-         endGame();   }
+    timer = setInterval(function () {
+        timerCount--;
+        secondsSection.textContent = timerCount;
+        if (timerCount <= 0) {
+            clearInterval(timer);
+            secondsSection.textContent = timer;
+            endGame();
+        }
     }, 1000);
-  }
-function endGame(){
+}
+function endGame() {
+    next.textContent = "Game Over";
+    gameBoard.style.display = "none";
+    finalTimer = timerCount;
     document.getElementsByClassName("resultBox")[0].style.display = "block";
-    submit.addEventListener("click", function(){
+    submit.addEventListener("click", function () {
         var winnerName = initials.value;
         console.log(winnerName);
-        localStorage
-    })
+        localStorage.setItem ("initials",winnerName);
+        localStorage.setItem("Score",score);
+        localStorage.setItem("Time", finalTimer);        
+    });
 }
 
 // questions
