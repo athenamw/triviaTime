@@ -16,7 +16,7 @@ var timer;
 var timerCount = 60;
 var finalTimer = 0;
 var submit = document.getElementById("submit");
-var initials = document.getElementById("initials");
+
 
 
 
@@ -92,24 +92,27 @@ function startTimer() {
 function endGame() {
     next.textContent = "Game Over";
     gameBoard.style.display = "none";
-    finalTimer = timerCount;
     document.getElementsByClassName("resultBox")[0].style.display = "block";
     submit.addEventListener("click", function () {
-        var winnerName = initials.value;
-        localStorage.setItem("results", winnerName);
-        localStorage.setItem("Time", finalTimer);
+        finalTimer = timerCount;
+        var winnerName = document.getElementById("initials").value;
+        let results = {
+            name: winnerName,
+            time: finalTimer
+        }
+        var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+        highScores.push(results);
+        localStorage.setItem("highScores", JSON.stringify(highScores));
+        
     });
 }
-function theWinners () {
-    localStorage.getItem("results",winnerName);
-    localStorage.getItem("Time", finalTimer);
-    endGame.style.display = "none";
-
+// function theWinners() {
     
-}
-function displayScore() {
-    submit.addEventListener("click",)
-}
+
+// }
+// function displayScore() {
+//     submit.addEventListener("click",)
+// }
 // questions
 var questions = [
     {
