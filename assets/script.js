@@ -57,8 +57,6 @@ next.addEventListener("click", function () {
     }
 });
 
-
-
 function checkAnswer() {
     var userSelection = this.textContent;
     this.style.color = "white";
@@ -98,13 +96,20 @@ function endGame() {
     document.getElementsByClassName("resultBox")[0].style.display = "block";
     submit.addEventListener("click", function () {
         var winnerName = initials.value;
-        console.log(winnerName);
-        localStorage.setItem ("initials",winnerName);
-        localStorage.setItem("Score",score);
-        localStorage.setItem("Time", finalTimer);        
+        localStorage.setItem("results", winnerName);
+        localStorage.setItem("Time", finalTimer);
     });
 }
+function theWinners () {
+    localStorage.getItem("results",winnerName);
+    localStorage.getItem("Time", finalTimer);
+    endGame.style.display = "none";
 
+    
+}
+function displayScore() {
+    submit.addEventListener("click",)
+}
 // questions
 var questions = [
     {
@@ -145,6 +150,16 @@ var questions = [
             "()",
             "''",
             "{}"
+        ]
+    },
+    {
+        question: "How do you display items saved in localStorage?",
+        answer: "getItem()",
+        options: [
+            "setItem()",
+            "console.log",
+            "getItem()",
+            "return"
         ]
     }
 
