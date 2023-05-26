@@ -16,21 +16,39 @@ var timer;
 var timerCount = 60;
 var finalTimer = 0;
 var submit = document.getElementById("submit");
+var newGame = document.getElementById("startOver");
+var clear = document.getElementById("clear")
+var leaders = document.getElementById("leaderBoard");
 
-
-
-
-// starts the game and presents 1st question
-startBtn.addEventListener("click", function () {
+function begin() {
     gameBoard.style.display = "block";
     startBtn.style.display = "none";
     rules.style.display = "none";
     nextQuestion(0);
     startTimer();
-});
+}
+
+function disableAnswers() {
+    ans1.disabled = true;
+    ans2.disabled = true;
+    ans3.disabled = true;
+    ans4.disabled = true;
+    next.disabled = false;
+}
+
+function enableAnswers() {
+    ans1.disabled = false;
+    ans2.disabled = false;
+    ans3.disabled = false;
+    ans4.disabled = false;
+    next.disabled = true; 
+}
+// starts the game and presents 1st question
+startBtn.addEventListener("click", begin);
 
 function nextQuestion(questionCount) {
     // gameBoard. = "";
+    enableAnswers();
     question.textContent = questions[questionCount].question;
     ans1.textContent = questions[questionCount].options[0];
     ans2.textContent = questions[questionCount].options[1];
@@ -70,6 +88,7 @@ function checkAnswer() {
         timerCount -= 10;
         this.style.backgroundColor = "red";
     }
+    disableAnswers();
 }
 
 ans1.addEventListener("click", checkAnswer);
@@ -106,13 +125,8 @@ function endGame() {
         
     });
 }
-// function theWinners() {
-    
+newGame.addEventListener("click", begin);
 
-// }
-// function displayScore() {
-//     submit.addEventListener("click",)
-// }
 // questions
 var questions = [
     {

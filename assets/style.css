@@ -68,6 +68,10 @@ body {
     display: none;
 }
 
+.leaderBoard {
+  display: none;
+}
+
 /* .startBtn: hover;
 .button-grid:hover;
 .submit:hover; */
