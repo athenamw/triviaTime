@@ -24,6 +24,8 @@ function begin() {
     gameBoard.style.display = "block";
     startBtn.style.display = "none";
     rules.style.display = "none";
+    leaders.style.display = "none";
+
     nextQuestion(0);
     startTimer();
 }
@@ -41,7 +43,7 @@ function enableAnswers() {
     ans2.disabled = false;
     ans3.disabled = false;
     ans4.disabled = false;
-    next.disabled = true; 
+    next.disabled = true;
 }
 // starts the game and presents 1st question
 startBtn.addEventListener("click", begin);
@@ -108,8 +110,8 @@ function startTimer() {
         }
     }, 1000);
 }
+
 function endGame() {
-    next.textContent = "Game Over";
     gameBoard.style.display = "none";
     document.getElementsByClassName("resultBox")[0].style.display = "block";
     submit.addEventListener("click", function () {
@@ -122,9 +124,10 @@ function endGame() {
         var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
         highScores.push(results);
         localStorage.setItem("highScores", JSON.stringify(highScores));
-        
+        location.assign("./leaderboard.html");
     });
 }
+
 newGame.addEventListener("click", begin);
 
 // questions
