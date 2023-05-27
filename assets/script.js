@@ -124,6 +124,7 @@ next.addEventListener("click", function () {
         ans4.style.color = "black";
     }
     else {
+        finalTimer = 60 - timerCount;
         endGame();
     }
 });
@@ -166,7 +167,6 @@ function endGame() {
     gameBoard.style.display = "none";
     document.getElementsByClassName("resultBox")[0].style.display = "block";
     submit.addEventListener("click", function () {
-        finalTimer = 60 - timerCount;
         var winnerName = document.getElementById("initials").value;
         let results = {
             name: winnerName,
