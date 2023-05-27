@@ -16,16 +16,67 @@ var timer;
 var timerCount = 60;
 var finalTimer = 0;
 var submit = document.getElementById("submit");
-var newGame = document.getElementById("startOver");
 var clear = document.getElementById("clear")
-var leaders = document.getElementById("leaderBoard");
+
+// questions
+var questions = [
+    {
+        question: "What does % sign signify in javascript?",
+        answer: "Remainder",
+        options: [
+            "Division",
+            "Percentage",
+            "Remainder",
+            "Output"
+        ]
+    },
+    {
+        question: "What statement ends a function in javascript?",
+        answer: "Return",
+        options: [
+            "Console.log",
+            "Continue",
+            "Break",
+            "Return"
+        ]
+    },
+    {
+        question: "Which statement converts JSON objects into a string?",
+        answer: "JSON.stringify",
+        options: [
+            "JSON.parse",
+            "JSON.stringify",
+            "JSON.string",
+            "JSON.dif"
+        ]
+    },
+    {
+        question: "What characters signifies an array?",
+        answer: "[]",
+        options: [
+            "[]",
+            "()",
+            "''",
+            "{}"
+        ]
+    },
+    {
+        question: "How do you display items saved in localStorage?",
+        answer: "getItem()",
+        options: [
+            "setItem()",
+            "console.log",
+            "getItem()",
+            "return"
+        ]
+    }
+
+];
 
 function begin() {
     gameBoard.style.display = "block";
     startBtn.style.display = "none";
     rules.style.display = "none";
-    leaders.style.display = "none";
-
     nextQuestion(0);
     startTimer();
 }
@@ -46,7 +97,7 @@ function enableAnswers() {
     next.disabled = true;
 }
 // starts the game and presents 1st question
-startBtn.addEventListener("click", begin);
+startBtn.addEventListener("click", begin());
 
 function nextQuestion(questionCount) {
     // gameBoard. = "";
@@ -127,60 +178,3 @@ function endGame() {
         location.assign("./leaderboard.html");
     });
 }
-
-newGame.addEventListener("click", begin);
-
-// questions
-var questions = [
-    {
-        question: "What does % sign signify in javascript?",
-        answer: "Remainder",
-        options: [
-            "Division",
-            "Percentage",
-            "Remainder",
-            "Output"
-        ]
-    },
-    {
-        question: "What statement ends a function in javascript?",
-        answer: "Return",
-        options: [
-            "Console.log",
-            "Continue",
-            "Break",
-            "Return"
-        ]
-    },
-    {
-        question: "Which statement converts JSON objects into a string?",
-        answer: "JSON.stringify",
-        options: [
-            "JSON.parse",
-            "JSON.stringify",
-            "JSON.string",
-            "JSON.dif"
-        ]
-    },
-    {
-        question: "What characters signifies an array?",
-        answer: "[]",
-        options: [
-            "[]",
-            "()",
-            "''",
-            "{}"
-        ]
-    },
-    {
-        question: "How do you display items saved in localStorage?",
-        answer: "getItem()",
-        options: [
-            "setItem()",
-            "console.log",
-            "getItem()",
-            "return"
-        ]
-    }
-
-];

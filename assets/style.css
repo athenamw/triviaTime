@@ -11,8 +11,6 @@
   --dark-green: #245953;
   --gray: #d8d8d8;
 }
-nav {
-}
 
 body {
   background-color: var(--gray);

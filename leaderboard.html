@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trivia Time</title>
     <link rel="resetsheet" href="./assets/reset.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/leaderboardStyle.css" />
+  </head>
+  <body>
     <section class="leaderBoard" id="leaderBoard">
-        <h2>Leader Results</h2>
+      <h2>Leader Results</h2>
+      <!-- <button class="startOver" id="startOver">New Game</button> -->
+      <!-- <button class="clear" id="clear">Clear Scores</button> -->
+    </section>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Time</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
     <button class="startOver" id="startOver">New Game</button>
     <button class="clear" id="clear">Clear Scores</button>
-    </section>
-    <script src="./assets/script.js"></script>
-</body>
+    <script src="./assets/leaderboardScript.js"></script>
+  </body>
 </html>
