@@ -166,7 +166,7 @@ function endGame() {
     gameBoard.style.display = "none";
     document.getElementsByClassName("resultBox")[0].style.display = "block";
     submit.addEventListener("click", function () {
-        finalTimer = timerCount;
+        finalTimer = 60 - timerCount;
         var winnerName = document.getElementById("initials").value;
         let results = {
             name: winnerName,
