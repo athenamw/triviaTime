@@ -97,7 +97,7 @@ function enableAnswers() {
     next.disabled = true;
 }
 // starts the game and presents 1st question
-startBtn.addEventListener("click", begin());
+startBtn.addEventListener("click", begin);
 
 function nextQuestion(questionCount) {
     // gameBoard. = "";

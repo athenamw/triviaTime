@@ -23,7 +23,6 @@ body {
   align-items: center;
 }
 
-.startBtn,
 .answerButtons {
   position: absolute;
   text-align: center;
