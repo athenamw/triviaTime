@@ -34,5 +34,6 @@ window.addEventListener("load", function () {
         row.appendChild(winners);
         row.appendChild(timer);
         tableBody.appendChild(row);
+        
     };
 });
