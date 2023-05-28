@@ -169,6 +169,7 @@ function startTimer() {
 function endGame() {
     gameBoard.style.display = "none";
     document.getElementsByClassName("resultBox")[0].style.display = "block";
+    document.getElementById("displayTime").textContent="Time To Complete: " + finalTimer + " seconds";
     submit.addEventListener("click", function () {
         var winnerName = document.getElementById("initials").value;
         let results = {
