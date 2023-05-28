@@ -6,14 +6,14 @@
 }
 
 :root {
-  --pink: #e49393;
-  --green: #408e91;
-  --dark-green: #245953;
-  --gray: #d8d8d8;
+  --aquamarine: #ADF1D2;
+  --light: #B5B9FC;
+  --eggplant: #AFCBFF;
+  --violet: #553555;
 }
 
 body {
-  background-color: var(--gray);
+  background-color: var(--aquamarine);
   padding: 0;
   margin: 0;
   display: flex;
@@ -31,15 +31,15 @@ body {
   justify-content: center;
   align-items: center;
   display: grid;
-  background-color: var(--pink);
   width: 250px;
   height: 50px;
   font-size: 16px;
-  border: 2px solid var(--dark-green);
+  border: 2px solid var(--violet);
 }
 
 #next {
-  background-color: var(--green);
+  background-color: var(--light);
+  font: var(--violet)
 }
 
 #gameBoard {
@@ -47,7 +47,7 @@ body {
   width: 800px;
   max-width: 80%;
   text-align: center;
-  color: var(--dark-green);
+  background-color: var(--eggplant);
   font-size: 20px;
   font: bold;
   padding: 10px;

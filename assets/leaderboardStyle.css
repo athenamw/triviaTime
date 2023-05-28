@@ -5,8 +5,20 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+:root {
+  --aquamarine: #ADF1D2;
+  --light: #B5B9FC;
+  --eggplant: #AFCBFF;
+  --violet: #553555;
+}
+
 #leaderBoard{
+  background-color: aquamarine;
     display: flexbox;
     justify-items: space-around;
     align-items: center;
+}
+
+.purpleColor{
+  background-color: #B5B9FC;
 }
