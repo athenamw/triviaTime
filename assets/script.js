@@ -17,6 +17,7 @@ var timerCount = 60;
 var finalTimer = 0;
 var submit = document.getElementById("submit");
 var clear = document.getElementById("clear")
+var link = document.getElementById("link");
 
 // questions
 var questions = [
@@ -77,6 +78,7 @@ function begin() {
     gameBoard.style.display = "block";
     startBtn.style.display = "none";
     rules.style.display = "none";
+    link.style.display = "none";
     nextQuestion(0);
     startTimer();
 }
@@ -124,6 +126,7 @@ next.addEventListener("click", function () {
         ans4.style.color = "black";
     }
     else {
+        // to get actual time taken instead of time remaining.
         finalTimer = 60 - timerCount;
         endGame();
     }

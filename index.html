@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trivia Time</title>
-    <link rel="resetsheet" href="./assets/reset.css" />
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous"
-  />
+    <!-- <link rel="resetsheet" href="./assets/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /> -->
     <link rel="stylesheet" href="./assets/style.css" />
-  </head>
-  
-  <body>
-    <nav><a href = "./leaderboard.html"> High Scores</a></nav>
-    <!-- rules box -->
-    <section class="rules" id="rules">
-        <section class="rulesTitle" id="rulesTitle">
-            <h2>Game Rules</h2>
-            <section class="ruleList" id="ruleList">
-                <ol>
-                    <li>You will have 1 minute to complete this quiz.</li>
-                    <li>An incorrect answer will subtract 10 seconds from the timer.</li>
-                    <li>You cannot quit once the game has begun.</li>
-                </ol>
+</head>
+
+<body>
+    <section class="position-relative">
+        <nav id="link"><a href="./leaderboard.html"> High Scores</a></nav>
+        <!-- rules box -->
+        <section class="rules text-center" id="rules">
+            <section class="rulesTitle" id="rulesTitle">
+                <h2>Game Rules</h2>
+                <section class="ruleList" id="ruleList">
+                    <ul class="list-unstyled">
+                        <li>You will have 1 minute to complete this quiz.</li>
+                        <li>An incorrect answer will subtract 10 seconds from the timer.</li>
+                        <li>You cannot quit once the game has begun.</li>
+                    </ul>
+                </section>
             </section>
-        </section>
-        <!--Start Button  -->
-        <section class="startBtn text-center" id="startBtn">
-            <button id="button">Start Game!</button>        
+            <!--Start Button  -->
+            <section class="startBtn text-center" id="startBtn">
+                <button id="button">Start Game!</button>
+            </section>
         </section>
     </section>
     <!--Game-->
@@ -46,22 +45,17 @@
         </header>
 
         <section class="askAway" id="askAway">
-            <!-- questions in javascript-->
+            <!-- questions in javascript -->
         </section>
-        <section class="options" id="options">
-            <!-- answers in javascript-->
-        </section>
+      
         <section id="answerButtons" class="button-grid">
             <button class="answers" id="ans1">Answer1</button>
             <button class="answers" id="ans2">Answer2</button>
             <button class="answers" id="ans3">Answer3</button>
             <button class="answers" id="ans4">Answer4</button>
         </section>
-        
+
         <section>
-            <section class="total" id="total">
-                <!-- how many right from javascript -->
-            </section>
             <button class="next" id="next">Next</button>
         </section>
     </section>
@@ -73,5 +67,6 @@
         <input placeholder="Enter Initials" id="initials"> </input>
     </section>
     <script src="./assets/script.js"></script>
-  </body>
+</body>
+
 </html>
