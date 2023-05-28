@@ -13,7 +13,6 @@
 }
 
 #leaderBoard{
-  background-color: aquamarine;
     display: flexbox;
     justify-items: space-around;
     align-items: center;
@@ -21,4 +20,8 @@
 
 .purpleColor{
   background-color: #B5B9FC;
+}
+
+body{
+  background-color: aquamarine;
 }

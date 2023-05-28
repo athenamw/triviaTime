@@ -68,3 +68,7 @@ body {
 .leaderBoard {
   display: none;
 }
+
+.submit{
+  background-color: #B5B9FC;
+}
