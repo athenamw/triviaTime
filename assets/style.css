@@ -77,10 +77,18 @@ nav{
   position: absolute;
   top: 0;
   left: 0;
+  margin-left: 25px;
 }
 
-.timeRemaining{
-  position: relative;
+#timeRemaining{
+  position: absolute;
   top: 0;
   right: 0;
+  margin-right: 25px;
+}
+
+#seconds{
+  position: absolute;
+  top: 15px;
+  right:75px;
 }
