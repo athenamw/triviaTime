@@ -162,6 +162,7 @@ function startTimer() {
         if (timerCount <= 0) {
             clearInterval(timer);
             secondsSection.textContent = 0; // Don't show negative time, set time remaining to zero
+            finalTimer = 60;
             endGame();
         }
     }, 1000);
@@ -174,6 +175,8 @@ function endGame() {
     document.getElementById("displayTime").textContent = "Time To Complete: " + finalTimer + " seconds";
     submit.addEventListener("click", function () {
         var winnerName = document.getElementById("initials").value;
+        // clears input box of initials. Was showing up when using back button.
+        document.getElementById("initials").value = "";
         let results = {
             name: winnerName,
             time: finalTimer
