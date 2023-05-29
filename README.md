@@ -1,12 +1,42 @@
 # triviaTime
-* Have a list of questions for the player. Each question should have at least 4 answers with one being correct. Have at least 2 questions, though more is encouraged!
-* When the user clicks the start button, show them the first question.
-* As the user answers questions, move them to the next question until all questions are out.
-* When no more questions are left, Show the game over screen.
-* Add in a timer. The timer should start as soon as the start button is clicked, and tick down each second. It should show in the top right corner of the page.
-* When the user choses an incorrect answer, take some time off the timer. How much is up to you.
-* When the timer reaches 0, show the game over screen.
-* Show the last timer value as the player's score on the game over screen.
-* Give the player the ability to enter their initials, then save them to localstorage along with the score from the game over screen. You should save the data in a format that allows multiple high scores to be saved.
-* Once the player saves their highscore, show the highscores as a list on the page
-* Add a link to the top left corner. When clicked, go directly to the highscore list.
+
+## Description
+Create a multiple choice quiz with at least 4 answers to choose from. Create a timer that deducts time when a wrong answer is chosen. Create a link to a saved highscore database. Create an input area that allows the player to see their score and enter their initials to be saved to the leaderboard. 
+
+## Installation
+N/A
+
+## Usage
+This is a quiz that is meant to be fun and test javascript knowledge. It is also meant to display skills that were learned during bootcamp.
+
+## Credits
+I had help from my tutor Dru Sanchez to understand loops. I used AskBCS about JSON. The other resources I used were Google. I reused my reset CSS page for this project.
+
+## License
+N/A
+
+## Deployed Site and Repository Links
+
+[Deployed site](https://athenamw.github.io/triviaTime/)
+
+[Repository](https://github.com/athenamw/triviaTime.git)
+
+[Main Javascript](https://github.com/athenamw/triviaTime/blob/main/assets/script.js)
+
+[Leaderboard Javascript](https://github.com/athenamw/triviaTime/blob/main/assets/leaderboardScript.js)
+
+[Main HTML](https://github.com/athenamw/triviaTime/blob/main/index.html)
+
+[Leaderboard HTML](https://github.com/athenamw/triviaTime/blob/main/leaderboard.html)
+
+[Reset CSS](https://github.com/athenamw/triviaTime/blob/main/assets/reset.css)
+
+[Main CSS](https://github.com/athenamw/triviaTime/blob/main/assets/style.css)
+
+[Leaderboard CSS](https://github.com/athenamw/triviaTime/blob/main/assets/leaderboardStyle.css)
+
+## Screenshot
+
+[Main Page Quiz](./screenshots/mainQuizPage.png)
+
+[Leaderboard](./screenshots/leaderboard.png)
