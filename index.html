@@ -13,8 +13,9 @@
 </head>
 
 <body>
-    <section class="container">
-        <nav class="nav" id="link"><a href="./leaderboard.html"> High Scores</a></nav>
+
+    <nav class="nav" id="link"><a href="./leaderboard.html"> High Scores</a></nav>
+  
 
         <!-- Rules box -->
         <section class="rules text-center" id="rules">
@@ -33,9 +34,9 @@
                 <button id="button">Start Game!</button>
             </section>
         </section>
-    </section>
-    <!--Game-->
-    <section class = "container position-absolute" id="gameBoard">
+        </section>
+        <!--Game-->
+     <section id="gameBoard">
         <header>
             <section class="name">Trivia Time</section>
         </header>
@@ -54,20 +55,21 @@
         <section>
             <button class="next" id="next">Next</button>
         </section>
-    </section>
-    <!-- timer -->
-    <section class="timer row" id="timer">
-        <section class="timeRemaining col">Time Remaining</section>
-        <section class="seconds col">60</section>
-    </section>
+        </section>
+        <!-- timer -->
+     <section class="timer" id="timer">
+        <section class="timeRemaining">Time Remaining</section>
+        <section class="seconds">60</section>
+        </section>
 
-    <!-- score -->
-    <section class="resultBox">
+        <!-- score -->
+        <section class="resultBox">
         <h2>Game Over</h2>
         <section id="displayTime"></section>
         <input placeholder="Enter Initials" id="initials"> </input>
         <button class="submit" id="submit">Submit</button>
-    </section>
+        </section>
+    
     <script src="./assets/script.js"></script>
 </body>
 

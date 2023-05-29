@@ -72,3 +72,15 @@ body {
 .submit{
   background-color: #B5B9FC;
 }
+
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.timeRemaining{
+  position: relative;
+  top: 0;
+  right: 0;
+}
