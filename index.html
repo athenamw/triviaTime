@@ -13,8 +13,9 @@
 </head>
 
 <body>
-    <section class="position-relative">
-        <nav id="link"><a href="./leaderboard.html"> High Scores</a></nav>
+    <section class="container">
+        <nav class="nav" id="link"><a href="./leaderboard.html"> High Scores</a></nav>
+
         <!-- Rules box -->
         <section class="rules text-center" id="rules">
             <section class="rulesTitle" id="rulesTitle">
@@ -33,17 +34,10 @@
             </section>
         </section>
     </section>
-
-    <section class="timer" id="timer">
-        <section class="timeRemaining">Time Remaining</section>
-        <section class="seconds">60</section>
-    </section>
-    <section class="time"></section>
     <!--Game-->
-    <section id="gameBoard">
+    <section class = "container position-absolute" id="gameBoard">
         <header>
             <section class="name">Trivia Time</section>
-            
         </header>
 
         <section class="askAway" id="askAway">
@@ -60,6 +54,11 @@
         <section>
             <button class="next" id="next">Next</button>
         </section>
+    </section>
+    <!-- timer -->
+    <section class="timer row" id="timer">
+        <section class="timeRemaining col">Time Remaining</section>
+        <section class="seconds col">60</section>
     </section>
 
     <!-- score -->
