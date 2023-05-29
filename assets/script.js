@@ -18,6 +18,7 @@ var finalTimer = 0;
 var submit = document.getElementById("submit");
 var clear = document.getElementById("clear")
 var link = document.getElementById("link");
+var timerDisplay= document.getElementById("timer")
 
 // questions
 var questions = [
@@ -160,7 +161,7 @@ function startTimer() {
         secondsSection.textContent = timerCount;
         if (timerCount <= 0) {
             clearInterval(timer);
-            secondsSection.textContent = timer;
+            secondsSection.textContent = 0; // Don't show negative time, set time remaining to zero
             endGame();
         }
     }, 1000);
@@ -168,8 +169,9 @@ function startTimer() {
 
 function endGame() {
     gameBoard.style.display = "none";
+    timerDisplay.style.display = "none";
     document.getElementsByClassName("resultBox")[0].style.display = "block";
-    document.getElementById("displayTime").textContent="Time To Complete: " + finalTimer + " seconds";
+    document.getElementById("displayTime").textContent = "Time To Complete: " + finalTimer + " seconds";
     submit.addEventListener("click", function () {
         var winnerName = document.getElementById("initials").value;
         let results = {
