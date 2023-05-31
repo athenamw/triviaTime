@@ -129,6 +129,7 @@ next.addEventListener("click", function () {
     else {
         // to get actual time taken instead of time remaining.
         finalTimer = 60 - timerCount;
+        clearInterval(timer);
         endGame();
     }
 });
@@ -172,18 +173,19 @@ function endGame() {
     gameBoard.style.display = "none";
     timerDisplay.style.display = "none";
     document.getElementsByClassName("resultBox")[0].style.display = "block";
-    document.getElementById("displayTime").textContent = "Time To Complete: " + finalTimer + " seconds";
-    submit.addEventListener("click", function () {
-        var winnerName = document.getElementById("initials").value;
-        // clears input box of initials. Was showing up when using back button.
-        document.getElementById("initials").value = "";
-        let results = {
-            name: winnerName,
-            time: finalTimer
-        }
-        var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-        highScores.push(results);
-        localStorage.setItem("highScores", JSON.stringify(highScores));
-        location.assign("./leaderboard.html");
-    });
+    document.getElementById("displayTime").textContent = "Time To Complete: " + finalTimer + " seconds"; 
 }
+
+submit.addEventListener("click", function () {
+    var winnerName = document.getElementById("initials").value;
+    // clears input box of initials. Was showing up when using back button.
+    document.getElementById("initials").value = "";
+    let results = {
+        name: winnerName,
+        time: finalTimer
+    }
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    highScores.push(results);
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    location.assign("./leaderboard.html");
+});
